@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --background: 220 14% 9%;
-    --foreground: 30 12% 92%;
+    --background: 0 0% 100%;
+    --foreground: 220 18% 12%;
 
-    --card: 220 13% 13%;
-    --card-foreground: 30 12% 92%;
+    --card: 220 14% 98%;
+    --card-foreground: 220 18% 12%;
 
-    --popover: 220 13% 13%;
-    --popover-foreground: 30 12% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 18% 12%;
 
     --primary: 22 92% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 10% 18%;
-    --secondary-foreground: 30 12% 92%;
+    --secondary: 220 14% 94%;
+    --secondary-foreground: 220 18% 12%;
 
-    --muted: 220 10% 18%;
-    --muted-foreground: 30 6% 62%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 8% 42%;
 
     --accent: 22 92% 52%;
     --accent-foreground: 0 0% 100%;
@@ -28,8 +28,8 @@
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 9% 22%;
-    --input: 220 9% 22%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
     --ring: 22 92% 52%;
 
     --radius: 0.25rem;
@@ -119,7 +119,7 @@
 
   .metal-grain {
     background-image:
-      linear-gradient(rgba(20, 20, 22, 0.82), rgba(15, 15, 17, 0.92)),
+      linear-gradient(rgba(245, 245, 247, 0.86), rgba(235, 236, 239, 0.92)),
       url("https://cdn.poehali.dev/projects/4037711d-125a-4e73-abee-1729d5439753/files/33c1ad5e-a407-4062-abb4-418836c45791.jpg");
     background-size: cover;
     background-position: center;
