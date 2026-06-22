@@ -82,37 +82,56 @@ const Index = () => {
       {/* Hero */}
       <section className="metal-grain relative overflow-hidden border-b border-border">
         <div className="diag-stripes pointer-events-none absolute inset-0" />
-        <div className="container relative mx-auto py-24 md:py-32">
-          <div className="max-w-3xl animate-fade-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-sm border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm uppercase tracking-wider text-primary">
-              <Icon name="BadgeCheck" size={16} /> Соответствие ГОСТ · Сертификаты
+        <div className="container relative mx-auto py-16 md:py-24">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            {/* Text */}
+            <div className="animate-fade-up">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-sm border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm uppercase tracking-wider text-primary">
+                <Icon name="BadgeCheck" size={16} /> Соответствие ГОСТ · Сертификаты
+              </div>
+              <h1 className="font-display text-5xl font-700 uppercase leading-[1.05] md:text-6xl">
+                Шпоночная <span className="text-primary">сталь</span><br />и металлопрокат
+              </h1>
+              <p className="mt-6 text-lg text-muted-foreground">
+                Производство и продажа шпоночной стали, калиброванного квадрата, проволоки и ленты.
+                Сталь 45, Ст3, Ст20 по ГОСТ. Размеры от 3 до 50 мм. Доставка по всей России.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button size="lg" className="font-display uppercase tracking-wider" asChild>
+                  <a href="#catalog"><Icon name="LayoutGrid" size={18} className="mr-2" /> Открыть каталог</a>
+                </Button>
+                <Button size="lg" variant="outline" className="font-display uppercase tracking-wider border-border">
+                  <Icon name="FileText" size={18} className="mr-2" /> Прайс-лист
+                </Button>
+              </div>
+              <div className="mt-10 grid grid-cols-3 gap-6">
+                {[
+                  { v: '500+', l: 'позиций на складе' },
+                  { v: '16 лет', l: 'на рынке металла' },
+                  { v: '48 ч', l: 'отгрузка по РФ' },
+                ].map((s) => (
+                  <div key={s.l}>
+                    <div className="font-display text-3xl font-700 text-primary">{s.v}</div>
+                    <div className="text-sm text-muted-foreground">{s.l}</div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <h1 className="font-display text-5xl font-700 uppercase leading-[1.05] md:text-7xl">
-              Шпоночная <span className="text-primary">сталь</span><br />и металлопрокат
-            </h1>
-            <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Производство и продажа шпоночной стали, калиброванного квадрата, проволоки и ленты.
-              Сталь 45, Ст3, Ст20 по ГОСТ. Размеры от 3 до 50 мм. Доставка по всей России.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button size="lg" className="font-display uppercase tracking-wider" asChild>
-                <a href="#catalog"><Icon name="LayoutGrid" size={18} className="mr-2" /> Открыть каталог</a>
-              </Button>
-              <Button size="lg" variant="outline" className="font-display uppercase tracking-wider border-border">
-                <Icon name="FileText" size={18} className="mr-2" /> Прайс-лист
-              </Button>
-            </div>
-            <div className="mt-12 grid max-w-lg grid-cols-3 gap-6">
-              {[
-                { v: '500+', l: 'позиций на складе' },
-                { v: '16 лет', l: 'на рынке металла' },
-                { v: '48 ч', l: 'отгрузка по РФ' },
-              ].map((s) => (
-                <div key={s.l}>
-                  <div className="font-display text-3xl font-700 text-primary">{s.v}</div>
-                  <div className="text-sm text-muted-foreground">{s.l}</div>
+            {/* Photo */}
+            <div className="relative hidden md:block">
+              <div className="absolute -inset-4 rounded-sm bg-primary/10 blur-2xl" />
+              <div className="relative overflow-hidden rounded-sm border border-border shadow-2xl">
+                <img
+                  src="https://cdn.poehali.dev/projects/4037711d-125a-4e73-abee-1729d5439753/files/2e3a80e5-a982-45ab-84ed-1341b1f60c96.jpg"
+                  alt="Шпоночная сталь — калиброванный прокат"
+                  className="h-[420px] w-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 border-t border-border bg-card/80 px-5 py-4 backdrop-blur-sm">
+                  <span className="font-display text-sm uppercase tracking-wider text-muted-foreground">
+                    Шпоночная сталь · ГОСТ 8787-68 · Сталь 45
+                  </span>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
